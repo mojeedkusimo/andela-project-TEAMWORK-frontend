@@ -1,8 +1,4 @@
-import { Link, BrowserRouter, Route } from "react-router-dom";
-import Login from "./Login";
-import Dashboard from "./Dashboard";
-import Post from "./Post";
-import Home from "./Home";
+import { Link } from "react-router-dom";
 
 let Navbar = () => {
     return (
@@ -14,23 +10,14 @@ let Navbar = () => {
                         <Link className="nav-link" to="/">Home</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link active" to="/">Sign In</Link>
+                        <Link className="nav-link active" to="/login">Login</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link active" to="/">Post</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link className="nav-link active" to="/">Dashboard</Link>
+                        <Link className="nav-link active" to="/post">Post</Link>
                     </li>
                 </ul>
             </div>
         </nav>
-        <BrowserRouter>
-        <Route exact="/" component={Home}/>
-        <Route exact="/signin" component={Login}/>
-        <Route exact="/post" component={Post}/>
-        <Route exact="/dashboard" component={Dashboard}/>
-        </BrowserRouter>
     </div>
     );
 }

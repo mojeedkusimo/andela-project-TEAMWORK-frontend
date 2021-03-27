@@ -1,15 +1,24 @@
+import { useState } from 'react';
+import AddPost from './AddPost';
 
-let Post = ({ title, description }) => {
-
+let Post = () => {
+    let [post, setPost] = useState("");
+     let sendPost = ([title, description]) => {
+        setPost({title, description});
+     }
     return (
-    <div className="row">
+    <div>
+        <AddPost sendPost={sendPost}/>
+
+        <div className="row">
         <div className="col-4"></div>
         <div className="col-4">
-            <h1 className="m-5 text-center shadow-lg">Post</h1>
-            <h3>{title}</h3>
-            <p>{description}</p>
+            <h1 className="m-5 text-center shadow-lg">Preview</h1>
+            <h3>{post.title}</h3>
+            <p>{post.description}</p>
         </div>
         <div className="col-4"></div>
+    </div>
     </div>
     );
 }
