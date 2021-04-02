@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/teamwork-frontend/static/css/main.6a4aae2a.chunk.css",
+    "main.js": "/teamwork-frontend/static/js/main.4a066ff1.chunk.js",
+    "main.js.map": "/teamwork-frontend/static/js/main.4a066ff1.chunk.js.map",
+    "runtime-main.js": "/teamwork-frontend/static/js/runtime-main.d7ce6544.js",
+    "runtime-main.js.map": "/teamwork-frontend/static/js/runtime-main.d7ce6544.js.map",
+    "static/js/2.7a4d0902.chunk.js": "/teamwork-frontend/static/js/2.7a4d0902.chunk.js",
+    "static/js/2.7a4d0902.chunk.js.map": "/teamwork-frontend/static/js/2.7a4d0902.chunk.js.map",
+    "index.html": "/teamwork-frontend/index.html",
+    "static/css/main.6a4aae2a.chunk.css.map": "/teamwork-frontend/static/css/main.6a4aae2a.chunk.css.map",
+    "static/js/2.7a4d0902.chunk.js.LICENSE.txt": "/teamwork-frontend/static/js/2.7a4d0902.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d7ce6544.js",
+    "static/js/2.7a4d0902.chunk.js",
+    "static/css/main.6a4aae2a.chunk.css",
+    "static/js/main.4a066ff1.chunk.js"
+  ]
+}
