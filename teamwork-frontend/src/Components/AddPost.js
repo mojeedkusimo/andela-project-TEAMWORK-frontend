@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-let AddPost = ({ sendPost }) => {
+let AddPost = ({ sendPost, error }) => {
 
 let [title, setTitle] = useState("");
 let [description, setDesciption] = useState("");
@@ -12,10 +12,11 @@ let [description, setDesciption] = useState("");
  }
 
     return (
-    <div className="row">
+    <div className="row mt-5">
         <div className="col-4"></div>
         <div className="col-4">
             <h1 className="m-5 text-center shadow-lg">Create a Post</h1>
+            <span className="text-danger">{error}</span>
             <form className="bg-light p-5" onSubmit={(e) => handleSubmit(e)}>
                 <div className="form-group">
                     <label>Title</label>
