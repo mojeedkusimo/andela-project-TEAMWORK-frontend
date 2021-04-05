@@ -1,20 +1,18 @@
 
 import getUser from '../helperFunctions/getUser';
 
-let Dashboard = () => {
+export const Dashboard = () => {
     let user = getUser();
     return (
-    <div className="row mt-5">
-        <div className="col-4"></div>
-        <div className="col-4">
-            <h1 className="m-5 text-center">Dashboard</h1>
-            <div className="text-primary">
-                <p>Hello {user.firstname}! Welcome to the dashboard</p>
+    <div className="row mt-5 text-center">
+        <div className="col"></div>
+            <div className="col-8 shadow-lg mx-3 my-5 py-5">
+                <h1 className="pt-3 action-header">Dashboard</h1>
+                <div className="text-primary">
+                    Hello {user.firstname}! Welcome to your dashboard
+                </div>
             </div>
-        </div>
-        <div className="col-4"></div>
+        <div className="col"></div>
     </div>
     );
 }
-
-export default Dashboard;

@@ -5,7 +5,7 @@ import { useHistory } from 'react-router-dom';
 import axios from '../helperFunctions/customAxios';
 import checkData from '../helperFunctions/checkData';
 
-let Post = () => {
+export const Post = () => {
 
     let user = getUser();
     let user_id = user === null ? null : user.user_id; 
@@ -45,5 +45,3 @@ let Post = () => {
     </div>
     );
 }
-
-export default Post;

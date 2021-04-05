@@ -1,3 +1,48 @@
+*{
+  box-sizing: border-box;
+}
+html,body{
+  overflow-x: hidden; 
+}
 .block-el {
-    display: block;
+  /* display: block; */
+}
+.typing-wlcome-note h1 {
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 16px;
+  letter-spacing: .2em;
+  margin: 0 auto;
+  letter-spacing: .2em;
+  animation: animated-text 4s linear 0.1s infinite normal both,
+                animated-cursor 600ms linear infinite;
+}
+
+/* Animation */
+@keyframes animated-text{
+  from{width: 0%;}
+  to{width: 100%;}
+}
+@keyframes animated-cursor{
+  from{border-right-color: rgba(0, 60, 255, .75);}
+  to{border-right-color: transparent;}
+}
+
+.navbar-light .navbar-nav.active, 
+.navbar-light .navbar-nav .nav-link:focus {
+  color: rgba(0, 60, 255, .75);
+}
+.action-header{
+  font-size: 1.7em;
+}
+.user-postTitle h3{
+  font-size: 1.2em;
+}
+
+
+@media only screen and (min-width:768px){
+  .typing-wlcome-note h1 {
+    font-size: 28px;
+    letter-spacing: .3em;
+  }  
 }

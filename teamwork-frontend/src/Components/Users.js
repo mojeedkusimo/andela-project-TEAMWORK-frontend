@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "../helperFunctions/customAxios";
 
-let Users = () => {
+export const Users = () => {
     let [users, setUsers] = useState("");
 
     useEffect(() => {
@@ -21,18 +21,16 @@ let Users = () => {
 
     return (
     <div className="row mt-5">
-        <div className="col-4"></div>
-        <div className="col-4">
-            <h1 className="m-5 text-center">All Users</h1>
+        <div className="col"></div>
+        <div className="col-8 shadow-lg mx-3 my-5">
+            <h1 className="text-center pt-3 action-header">All Users</h1>
             <div className="text-primary">
                 <ol>
                     {users}
                 </ol>
             </div>
         </div>
-        <div className="col-4"></div>
+        <div className="col"></div>
     </div>
     );
 }
-
-export default Users;

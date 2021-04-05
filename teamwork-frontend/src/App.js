@@ -1,17 +1,10 @@
-
-import Login from "./Components/Login";
-import Post from "./Components/Post";
-import Dashboard from './Components/Dashboard'
-import Navbar from "./Components/Navbar";
-import Home from "./Components/Home";
 import { Route, Switch } from "react-router-dom";
-import Register from "./Components/Register";
-import Users from "./Components/Users";
-import Feed from "./Components/Feed";
-import ViewArticle from "./Components/ViewArticle";
-import ViewGif from "./Components/ViewGif";
-import getUrl from "./helperFunctions/getUrl";
-// import getFeed from "./helperFunctions/getFeed";
+import getUrl from "./helperFunctions/getUrl"
+import {
+        Dashboard, Feed, Home, Login, Navbar, Post, Register,
+        Users, ViewArticle, ViewGif
+       } 
+       from "./Components"
 
 let App = () => {
 

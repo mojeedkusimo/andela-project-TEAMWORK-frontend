@@ -3,13 +3,16 @@ import { useHistory } from 'react-router-dom';
 import getFeed from "../helperFunctions/getFeed";
 import axios from "../helperFunctions/customAxios";
 import { useState } from 'react';
+import ContentEditable from 'react-contenteditable'
 
-let ViewArticle = () => {
+export const ViewArticle = () => {
 
     let [error, setError] = useState('');
     let user = getUser();
     let history = useHistory();
     let post = getFeed();
+    const [isEditable, setIsEditable] = useState(true)
+
     let deletePost = async (user_id, feed_id) => {
         let data = {user_id, feed_id}
         let res = await axios.delete(`/feed/${feed_id}`, {data});
@@ -19,38 +22,42 @@ let ViewArticle = () => {
         } else {
             alert(res.data.data.message);
             history.push('/feed');
-        }
-
-        
+        }   
     }
 
-    let modify = user.firstname === post.firstname ? 
-                <div className='row mt-5'>
-                    <div className='col-4 text-left'><button className='btn btn-success'>Edit</button></div>
-                    <div className='col-4 text-center text-danger'>{error}</div>
-                    <div className='col-4 text-right'><button className='btn btn-danger' onClick={() => deletePost(user.user_id, post.feed_id)}>Delete</button></div>
-                </div> : null
+    const handleEdit = () => {
+        setIsEditable(false)
+    }
 
     return (
     <div>
         {
-            user === null ? 
+            user === null || user.firstname === " " ? 
             history.push('/login') :
-            <div>
+            <>
                 <div className="row mt-5">
-                    <div className="col-4"></div>
-                    <div className="col-4">
-                        <h1 className="mt-5  text-center shadow-lg">{post.title}</h1>
+                    <div className="col"></div>
+                    <div className="col-9">
+                        <h1 className="text-center pt-3 action-header">{post.title}</h1>
                         <small className='text-center d-block'>...by {post.firstname}</small>
-                        {modify}
-                        <p className='bg-light p-5'>{post.article_url}</p>
+                        <p className='text-danger'>{error}</p>
+                        <form>
+                            <textarea className='bg-light p-5' disabled={isEditable}>
+                                {post.article_url}
+                            </textarea>
+                        </form>
                     </div>
-                    <div className="col-4"></div>
+                    <div className="col"></div>
                 </div>
-            </div> 
+                <div className='row my-3'>
+                    <div className="col"></div>
+                    <button onClick={handleEdit} className='col-3 p-2 btn btn-success'>Edit</button>
+                    <div className='col'></div>
+                    <button className='col-3 p-2 btn btn-danger' onClick={() => deletePost(user.user_id, post.feed_id)}>Delete</button>
+                    <div className="col"></div>
+                </div>
+            </> 
         }
     </div>
     );
 }
-
-export default ViewArticle;

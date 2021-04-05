@@ -1,34 +1,34 @@
 import { Link } from "react-router-dom";
 
-let Navbar = () => {
+export const Navbar = () => {
     return (
-        <div>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-            <div className="" id="navbarNav">
+        <nav className="navbar navbar-expand-md navbar-light bg-light">
+            <a className="navbar-brand" href="#">Tee_W</a>
+            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav">
                     <li className="nav-item active">
-                        <Link className="nav-link" to="/">Home</Link>
+                        <Link className="nav-link react-links" to="/">Home</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link active" to="/login">Login</Link>
+                        <Link className="nav-link react-links" to="/login">Login</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link active" to="/post">Post</Link>
+                        <Link className="nav-link react-links" to="/post">Post</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link active" to="/register">Register</Link>
+                        <Link className="nav-link react-links" to="/register">Register</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link active" to="/users">Users</Link>
+                        <Link className="nav-link react-links" to="/users">Users</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link active" to="/feed">Feed</Link>
+                        <Link className="nav-link react-links" to="/feed">Feed</Link>
                     </li>
                 </ul>
             </div>
         </nav>
-    </div>
     );
 }
-
-export default Navbar;

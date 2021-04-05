@@ -2,7 +2,7 @@ import getUser from '../helperFunctions/getUser';
 import { useHistory } from 'react-router-dom';
 import getFeed from "../helperFunctions/getFeed";
 
-let ViewGif = () => {
+export const ViewGif = () => {
 
     let user = getUser();
     let history = useHistory();
@@ -27,5 +27,3 @@ let ViewGif = () => {
     </div>
     );
 }
-
-export default ViewGif;
