@@ -38,7 +38,9 @@ html,body{
 .user-postTitle h3{
   font-size: 1.2em;
 }
-
+div:focus{
+  /* outline: none; */
+}
 
 @media only screen and (min-width:768px){
   .typing-wlcome-note h1 {
