@@ -1,4 +1,4 @@
-import { Route, Switch } from "react-router-dom";
+import {Route, Switch } from "react-router-dom"
 import getUrl from "./helperFunctions/getUrl"
 import {
         Dashboard, Feed, Home, Login, Navbar, Post, Register,
@@ -13,18 +13,18 @@ let App = () => {
 
   return (
     <div>
-    <Navbar/>
-    <Switch>
-        <Route exact path="/" component={Home}/>
-        <Route exact path="/login" component={Login}/>
-        <Route exact path="/post" component={Post}/>
-        <Route exact path="/dashboard" component={Dashboard}/>
-        <Route exact path="/register" component={Register}/>
-        <Route exact path="/users" component={Users}/>
-        <Route exact path="/feed" component={Feed}/>
-        <Route exact path={"/article"} component={ViewArticle}/>
-        <Route exact path={"/gif"} component={ViewGif}/>
-    </Switch>
+      <Navbar/>
+      <Switch>
+          <Route exact path="/" component={Home}/>
+          <Route path="/login" component={Login}/>
+          <Route path="/post" component={Post}/>
+          <Route path="/dashboard" component={Dashboard}/>
+          <Route path="/register" component={Register}/>
+          <Route path="/users" component={Users}/>
+          <Route path="/feed" component={Feed}/>
+          <Route path={"/article"} component={ViewArticle}/>
+          <Route path={"/gif"} component={ViewGif}/>
+      </Switch>
     </div>
   );
 }
